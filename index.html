@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Ryan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 40px;
+            max-width: 1000px;
+            margin: auto;
+            background-color: white;
+        }
+
+        .projetos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .projeto {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+
+        .projeto a {
+            text-decoration: none;
+            color: #0077cc;
+        }
+
+        .projeto a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        #btnTopo {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Olá, sou o Ryan</h1>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+   <section id="sobre" style="display: flex; align-items: center; gap: 20px; max-width: 1000px; margin: auto; background-color: white; padding: 40px;">
+    <img src="ryan.jpg" alt="Foto do Ryan" style="max-width: 250px; border-radius: 8px;">
+    <div>
+        <h2>Sobre Mim:</h2>
+        <p>Meu nome é Ryan, tenho 16 anos e curso o 2º ano do ensino médio técnico no Colégio de Aplicação José Aloísio de Aragão – UEL. Gosto de tecnologia e programação, e já fiz alguns projetos web simples.</p>
+        <p>Sou rápido para aprender e resolver problemas,posso me adaptar a diferentes situações.</p>
+        <p>Quero melhorar minhas habilidades para crescer na área de desenvolvimento.</p>
+        <p>Quanto a hobbies, curto tanto sair quanto ficar em casa e praticar esportes, principalmente futebol.</p>
+    </div>
+</section>
+
+
+
+
+    <section id="projetos">
+        <h2>Meus Projetos</h2>
+        <div class="projetos">
+
+            <div class="projeto">
+                <h3>Galeria de Filmes 🎬</h3>
+                <p>Site HTML feito como trabalho do meu curso de programação, com uma galeria de filmes de animação.</p>
+                <a href="https://github.com/fckryzns/GALERIA-DE-FILMES-DIA-28/settings/pages" target="_blank">Ver mais</a>
+            </div>
+
+            <div class="projeto">
+                <h3>Ryan SKT 🛹</h3>
+                <p>Trabalho da escola de um site de vendas de skate, com modelos e informações sobre a marca. Criado com HTML e CSS.</p>
+                <a href="https://github.com/fckryzns/ryanskt/settings/pages" target="_blank">Ver mais</a>
+            </div>
+
+        </div>
+    </section>
+<section id="contato">
+    <h2>Contato</h2>
+    <p>Você pode me encontrar no e-mail:</p>
+    <ul>
+        <li>Email: <a href="mailto:ryanlimarodrigues812@gmail.com">ryanlimarodrigues812@gmail.com</a></li>
+    </ul>
+
+</section>
+
+    <footer>
+        <p>&copy; 2025 Ryan Lima. Todos os direitos reservados.</p>
+    </footer>
+
+    <button id="btnTopo" title="Voltar ao topo">↑</button>
+
+    <script>
+        console.log("Portfólio do Ryan carregado com sucesso!");
+
+        const btnTopo = document.getElementById("btnTopo");
+        window.addEventListener("scroll", function() {
+            if (window.scrollY > 200) {
+                btnTopo.style.display = "block";
+            } else {
+                btnTopo.style.display = "none";
+            }
+        });
+
+        btnTopo.addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+</body>
+</html>
